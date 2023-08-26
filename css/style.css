@@ -734,7 +734,7 @@ body {
 }
 
 .consultation__text .consultation__list li::before {
-  content: url(./img/arrowRight.svg);
+  content: url(../img/arrowRight.svg);
   top: 50%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
@@ -859,7 +859,7 @@ body {
 }
 
 .faq__content__items__item .faq-title::after {
-  content: url(./img/arrowDown.svg);
+  content: url(../img/arrowDown.svg);
   display: block;
   position: absolute;
   top: 50%;
@@ -887,7 +887,7 @@ body {
 }
 
 .faq__content__items__item .faq-input:checked ~ .faq-title::after {
-  content: url(./img/arrowUp.svg);
+  content: url(../img/arrowUp.svg);
 }
 
 .faq__content__items__item .faq-text {
