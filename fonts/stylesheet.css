@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'CAT Linz';
+    src: url('CATLinz.eot');
+    src: url('CATLinz.eot?#iefix') format('embedded-opentype'),
+        url('CATLinz.woff2') format('woff2'),
+        url('CATLinz.woff') format('woff'),
+        url('CATLinz.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
