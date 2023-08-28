@@ -1,3 +1,17 @@
+let preLoader = document.getElementById('preloader');
+
+document.body.onload = function () {
+
+  setTimeout(function() {
+    if( !preLoader.classList.contains('done') )
+    {
+      preLoader.classList.add('done')
+    }
+  }, 3000);
+
+};
+
+
 const menuIcon = document.querySelector('.menu__icon');
 const menuHeader = document.querySelector('.header__menu');
 
@@ -12,36 +26,63 @@ if (menuIcon) {
 
 function readMore() {
     let dots = document.getElementById("dots");
-    let moreText = document.getElementById("more");
     let btnText = document.getElementById("myBtn");
 
     if (dots.style.display === "none") {
       dots.style.display = "inline";
       btnText.innerHTML = "Читать далее";
-      moreText.style.display = "none";
     } else {
       dots.style.display = "none";
       btnText.innerHTML = "Свернуть";
-      moreText.style.display = "inline";
     }
   };
 
 
+
+  let myBtn = document.getElementsByClassName("about__text__btn");
+  let c;
+
+for (c = 0; c < myBtn.length; c++) {
+  myBtn[c].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.previousElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+};
+
+
 function readMore2() {
-  let dots2 = document.getElementById("dots2")
-  let moreText2 = document.getElementById("more2");
   let btnText2 = document.getElementById("myBtn2")
+  let dots2 = document.getElementById("dots2");
 
   if (dots2.style.display === "none") {
     dots2.style.display = "inline";
     btnText2.innerHTML = "Читать далее";
-    moreText2.style.display = "none";
   } else {
     dots2.style.display = "none";
     btnText2.innerHTML = "Свернуть";
-    moreText2.style.display = "inline";
   }
+
 };
+
+let myBtn2 = document.getElementsByClassName("education__text__btn");
+let c2;
+
+for (c2 = 0; c2 < myBtn2.length; c2++) {
+  myBtn2[c2].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.previousElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
 
 
 
@@ -78,3 +119,20 @@ if(menuLinks.length > 0 && menuLinks2.length > 0){
     };
 
 };
+
+
+
+let acc = document.getElementsByClassName("accordion");
+let i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    let panel = this.nextElementSibling;
+    if (panel.style.maxHeight){
+      panel.style.maxHeight = null;
+    } else {
+      panel.style.maxHeight = panel.scrollHeight + "px";
+    }
+  });
+}
